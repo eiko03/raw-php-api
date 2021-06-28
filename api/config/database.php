@@ -11,12 +11,12 @@ protected $conn;
 
 function __construct()
 {
-    (new DotEnv(__DIR__ . '/../.env'))->load();
+    (new DotEnv(__DIR__ . '/../../.env'))->load();
 
 }
 
 
-public function connect(): ?PDO
+public function getConnection(): ?PDO
 {
     $this->host = getenv('DB_HOST');
     $this->db_name = getenv('DB_DATABASE');
