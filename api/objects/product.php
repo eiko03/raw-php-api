@@ -35,7 +35,10 @@ class Product
                         ON p.category_id = c.id
             ORDER BY
                 p.created DESC";
-
+//        $query = "SELECT
+//                *
+//            FROM
+//                " . $this->table_name . " ";
         // prepare query statement
         $stmt = $this->conn->prepare($query);
 

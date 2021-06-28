@@ -40,7 +40,7 @@ if($num>0){
             "description" => html_entity_decode($description),
             "price" => $price,
             "category_id" => $category_id,
-            "category_name" => $category_name
+//            "category_name" => $category_name
         );
 
         array_push($products_arr["records"], $product_item);
@@ -50,7 +50,7 @@ if($num>0){
     http_response_code(200);
 
     // show products data in json format
-    return json_encode($products_arr);
+    echo json_encode($products_arr);
 }
 
 else{
